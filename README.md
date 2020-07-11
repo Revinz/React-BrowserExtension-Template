@@ -9,7 +9,7 @@ Simply run
 ```
 npm install
 ```
-*note: might need to run it twice if it gives a 'missing index.ts' error.*
+*note: might need to run it twice if it gives a 'missing index.js' error.*
 
 :warning: Do not remove 'main' from the entry-points nor the '/src/main_temp.js' file. React requires an entry point named 'main'.
 Simply add your own entry points as required.
