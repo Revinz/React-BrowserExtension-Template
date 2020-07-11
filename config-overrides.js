@@ -5,9 +5,12 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = function override(config, env) {
+  //A 'main' entry point is required. Otherwise it gives a
+  //'Cannot read property 'filter' of undefined' error.
   config.entry = {
-    youtube: "./src/HelloWorld.tsx",
-    main: "./src/background.tsx",
+    main: "./src/main_temp.js",
+    background: "./src/background.tsx",
+    helloworld: "./src/HelloWorld.tsx",
   };
   config.output = {
     filename: "[name]/bundle.js",

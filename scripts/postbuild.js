@@ -9,6 +9,7 @@ var filesToDelete = [
   "precache*",
   "service-worker.js",
   "*.ico",
+  "main",
 ];
 
 filesToDelete.forEach((e) => {
