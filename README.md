@@ -1,44 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Summary
 
-## Available Scripts
+A React template with TypeScript and Jest-Puppeteer for Browser Extensions. 
+Currently the build folder structure is for a content-script focused extension, but might be updated in the future to support non-content-script focused extensions.
 
-In the project directory, you can run:
+## Install
 
-### `npm start`
+Simply run
+```
+npm install
+```
+*note: might need to run it twice if it gives a 'missing index.ts' error.*
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+:warning: Do not remove 'main' from the entry-points nor the '/src/main_temp.js' file. React requires an entry point named 'main'.
+Simply add your own entry points as required.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Testing
 
-### `npm test`
+To run tests, use one of the following commands
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run test`
 
-### `npm run build`
+Runs all Unit and Integration tests once without verbose. Automatically builds.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run test:verbose`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Same as ```npm run test``` but with verbose.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run test:unit`
 
-### `npm run eject`
+Runs only the unit tests once.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npm run test:integration`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs only the integration tests once. Automatically builds.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Other Info
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Custom HTML Elements
+To use custom HTML elements (e.g. <custom-element> ... </custom-element>), see '/src/decleration.d.ts'. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
