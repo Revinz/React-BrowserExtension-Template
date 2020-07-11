@@ -13,17 +13,17 @@
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "css": ["/youtube/bundle.css"],
+      "css": ["/helloworld/bundle.css"],
       "run_at": "document_end",
       "js": [
-        "/youtube/bundle.js",
-	"/main/bundle.js"
+        "/helloworld/bundle.js",
+	"/background/bundle.js"
       ]
     }
   ],
 
   "background": {
-    "scripts": ["/main/bundle.js"],
+    "scripts": ["/background/bundle.js"],
     "persistent": true
   },
 
